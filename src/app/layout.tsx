@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/components/Navbar";
+import { ThemeProvider } from "./theme-provider";
+import { ModeToggle } from "@/components/ToggleMode";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +18,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <head />
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <header className="sticky top-0 z-[9999]">
+            <div className="w-full flex justify-between">
+              <h1>Rzkynovan</h1>
+              <div className="flex">
+                <Navbar />
+                <ModeToggle />
+              </div>
+            </div>
+          </header>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
