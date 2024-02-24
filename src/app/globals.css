@@ -56,4 +56,37 @@
   body {
     @apply bg-background text-foreground;
   }
+  .container {
+    @apply max-w-7xl;
+  }
+  .flare {
+    position: fixed;
+    z-index: -10 !important;
+    border: 2px solid #ffffff2b;
+    border-radius: 50%;
+    mix-blend-mode: screen;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+
+    filter: blur(200px);
+    background-color: #327ef845;
+
+    cursor: none !important; /* Let's hide the default cursor so it looks way better */
+  }
+
+  /* We need to remove this custom cursor in mobile devices */
+  @media screen and (max-width: 768px) {
+    .flare {
+      display: none;
+      width: 0;
+      height: 0;
+      transition: width 0.2s ease-in-out, height 0.2s ease-in-out,
+        opacity 0.2s ease-in-out;
+    }
+  }
+  .flare.pointer {
+    opacity: 0 !important;
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out,
+      opacity 0.2s ease-in-out;
+  }
 }

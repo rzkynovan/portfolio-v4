@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Fira_Code } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { ThemeProvider } from "./theme-provider";
 import { ModeToggle } from "@/components/ToggleMode";
+import Image from "next/image";
+import HeaderComponent from "@/components/Header";
 
-const inter = Inter({ subsets: ["latin"] });
+const fira = Fira_Code({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,22 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body>
+      <body className={fira.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <header className="sticky top-0 z-[9999]">
-            <div className="w-full flex justify-between">
-              <h1>Rzkynovan</h1>
-              <div className="flex">
-                <Navbar />
-                <ModeToggle />
-              </div>
-            </div>
-          </header>
           {children}
         </ThemeProvider>
       </body>
