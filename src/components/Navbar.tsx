@@ -60,7 +60,7 @@ export function Navbar({ isHidden }: props) {
     <NavigationMenu className=" max-lg:hidden">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="#about" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               About
             </NavigationMenuLink>
@@ -68,7 +68,7 @@ export function Navbar({ isHidden }: props) {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="#work" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Work
             </NavigationMenuLink>
@@ -76,7 +76,7 @@ export function Navbar({ isHidden }: props) {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="#experience" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Experience
             </NavigationMenuLink>

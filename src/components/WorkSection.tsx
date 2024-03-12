@@ -19,8 +19,8 @@ export default function WorkSection({
   isReverse,
 }: workprops) {
   return (
-    <section className="bg-white dark:bg-[#030712] grid place-items-center sticky top-0 max-lg:px-6 max-lg:py-4 max-lg:border-y min-h-screen lg:h-screen">
-      <div className="grid lg:grid-cols-2 place-items-center max-w-7xl mx-auto ">
+    <section className="bg-white lg:shadow-2xl lg:shadow-white dark:bg-[#030712] grid place-items-center lg:sticky top-0 max-xl:px-6 max-lg:py-4 max-lg:border-y min-h-screen lg:h-screen">
+      <div className="grid lg:grid-cols-2 place-items-center max-w-7xl mx-auto">
         <div className={isReverse ? "lg:order-1" : undefined}>
           <Image
             src={hero.src}
@@ -29,7 +29,7 @@ export default function WorkSection({
             alt={hero.alt}
           />
         </div>
-        <div className="flex flex-col w-full items-start justify-between">
+        <div className="flex flex-col w-full items-start justify-between ">
           <div className="flex justify-between flex-wrap gap-y-3 w-full">
             <p className="text-xs lg:text-base uppercase">
               visite site <br />
@@ -61,7 +61,7 @@ export default function WorkSection({
                 width={logo.width}
                 height={logo.height}
                 alt={logo.alt}
-                className="bg-black p-2 dark:bg-transparent grayscale"
+                className="p-2 dark:bg-transparent"
               />
             </div>
             <h3 className=" text-3xl font-semibold">{tagline}</h3>
