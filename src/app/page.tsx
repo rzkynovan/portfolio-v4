@@ -226,7 +226,7 @@ export default function Home() {
                     <div>
                       <BiRightArrow className="text-sky-700 dark:text-sky-400" />
                     </div>
-                    <p>Build an application using Nuxt JS and Vuetify</p>
+                    <p>Build an application using Vue, Nuxt JS, and Vuetify</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <div>
