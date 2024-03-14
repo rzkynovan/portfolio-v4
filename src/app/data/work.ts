@@ -3,6 +3,39 @@ import { workprops } from "@/types/work";
 export const WORK: workprops[] = [
   {
     hero: {
+      src: "/images/work/5.png",
+      width: 600,
+      height: 600,
+      alt: "Eduflow",
+    },
+    site: "eduflow-fe.vercel.app",
+    siteurl: "https://eduflow-fe.vercel.app/",
+    place: "surabaya",
+    country: "indonesia",
+    timestart: "Jan 2024",
+    timeend: "present",
+    tagline: "EduFlow: One Stop Solution Learning Management System",
+    logo: {
+      src: "/images/work/logo5.png",
+      width: 150,
+      height: 150,
+      alt: "Eduflow logo",
+    },
+    techstack: [
+      "Full-Stack Web Developer",
+      "Golang",
+      "NextJS",
+      "TypeScript",
+      "Tailwind CSS",
+      "Cloud Compute",
+      "AWS",
+    ],
+    description:
+      "Eduflow offers a comprehensive learning management system (LMS), providing a one-stop solution for educational needs. The platform likely includes features such as course creation, assignment management, grading, and student engagement tools. It aims to streamline the learning process for educators and learners alike, offering a user-friendly interface and robust functionality to support various educational settings.",
+    isReverse: true,
+  },
+  {
+    hero: {
       src: "/images/work/2.png",
       width: 600,
       height: 600,

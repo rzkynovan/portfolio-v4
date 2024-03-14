@@ -56,7 +56,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
+              transition={{ duration: 0.3, ease: "easeOut", delay: 0.3 }}
             >
               <p className=" text-gray-800 dark:text-gray-400 text-base lg:text-xl">
                 Hello! My name is{" "}
@@ -87,7 +87,7 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, y: 150 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeIn" }}
+                transition={{ duration: 0.3, ease: "easeIn", delay: 0.6 }}
               >
                 <Link
                   href={"/"}
@@ -99,7 +99,7 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, ease: "easeIn" }}
+                transition={{ duration: 0.3, ease: "easeIn", delay: 0.4 }}
               >
                 <Link
                   href={"/"}
@@ -111,7 +111,7 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, ease: "easeIn" }}
+                transition={{ duration: 0.3, ease: "easeIn", delay: 0.2 }}
               >
                 <Link
                   href={"/"}
@@ -208,7 +208,7 @@ export default function Home() {
           className=" mx-auto max-w-7xl lg:flex flex-row justify-center gap-2 items-start"
         >
           <div>
-            <TabsList className="flex max-lg:mb-6 max-lg:pb-2 lg:flex-col max-lg:justify-start gap-3 h-full max-w-[280px] min-[425px]:max-w-sm md:max-w-xl lg:w-auto items-start overflow-x-scroll">
+            <TabsList className="flex max-lg:mb-6 max-lg:pb-2 lg:flex-col max-lg:justify-start gap-3 h-full max-w-[280px] min-[375px]:max-w-sm md:max-w-xl lg:w-auto items-start overflow-x-scroll">
               <TabsTrigger value="kano">PT Kano</TabsTrigger>
               <TabsTrigger value="raihasa">Raihasa.co</TabsTrigger>
               <TabsTrigger value="rencanain">Rencana.in</TabsTrigger>
