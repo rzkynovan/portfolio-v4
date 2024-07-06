@@ -131,7 +131,7 @@ export default function Home() {
               >
                 <Image
                   className=" "
-                  src={"/images/hero.png"}
+                  src={"/images/hero2.png"}
                   width={500}
                   height={500}
                   alt="me"
@@ -143,7 +143,7 @@ export default function Home() {
       </section>
 
       <Marquee autoFill className=" border-y py-6 mt-24 max-lg:mt-12">
-        <h5 className="text-2xl ml-24 font-semibold">Some Things I’ve Built</h5>
+        <h5 className="text-2xl ml-24 font-semibold">Highlight Project</h5>
       </Marquee>
       <>
         <div id="work" />
@@ -212,6 +212,8 @@ export default function Home() {
               <TabsTrigger value="kano">PT Kano</TabsTrigger>
               <TabsTrigger value="raihasa">Raihasa.co</TabsTrigger>
               <TabsTrigger value="rencanain">Rencana.in</TabsTrigger>
+              <TabsTrigger value="youngtive">PT. Youngtive</TabsTrigger>
+              <TabsTrigger value="betau">BETA U</TabsTrigger>
             </TabsList>
           </div>
           <TabsContent value="kano">
@@ -254,7 +256,7 @@ export default function Home() {
             <Card>
               <CardHeader>
                 <CardTitle>Frontend Engineer</CardTitle>
-                <CardDescription>Nov 2023 - Present</CardDescription>
+                <CardDescription>Nov 2023 - Apr 2024</CardDescription>
               </CardHeader>
               <CardContent className="space-y-2">
                 <div className="flex flex-col gap-3">
@@ -306,6 +308,90 @@ export default function Home() {
                       <BiRightArrow className="text-sky-700 dark:text-sky-400" />
                     </div>
                     <p>Build front-end section using NextJs</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+          <TabsContent value="youngtive">
+            <Card>
+              <CardHeader>
+                <CardTitle>Co-Founder</CardTitle>
+                <CardDescription>Mar 2024 - Present</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                <div className="flex flex-col gap-3">
+                  <div className="flex items-start gap-3">
+                    <div>
+                      <BiRightArrow className="text-sky-700 dark:text-sky-400" />
+                    </div>
+                    <p>
+                      Overseeing the entire software development lifecycle, from
+                      ideation to deployment.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div>
+                      <BiRightArrow className="text-sky-700 dark:text-sky-400" />
+                    </div>
+                    <p>Lead and managing several project using scrum method</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div>
+                      <BiRightArrow className="text-sky-700 dark:text-sky-400" />
+                    </div>
+                    <p>
+                      Building high-performance software that makes a difference
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div>
+                      <BiRightArrow className="text-sky-700 dark:text-sky-400" />
+                    </div>
+                    <p>
+                      Working with talented engineers to create innovative
+                      solutions
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div>
+                      <BiRightArrow className="text-sky-700 dark:text-sky-400" />
+                    </div>
+                    <p>Solving complex technical problems</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div>
+                      <BiRightArrow className="text-sky-700 dark:text-sky-400" />
+                    </div>
+                    <p>Helping businesses grow and succeed</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+          <TabsContent value="betau">
+            <Card>
+              <CardHeader>
+                <CardTitle>Frontend Engineer</CardTitle>
+                <CardDescription>Jun 2024 - Present</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                <div className="flex flex-col gap-3">
+                  <div className="flex items-start gap-3">
+                    <div>
+                      <BiRightArrow className="text-sky-700 dark:text-sky-400" />
+                    </div>
+                    <p>
+                      Responsible for slicing UI to code and making it into an
+                      interactive website. Build several pages using NextJs,
+                      Typescript, and Tailwindcss.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div>
+                      <BiRightArrow className="text-sky-700 dark:text-sky-400" />
+                    </div>
+                    <p>Build interactive UI and motion animation</p>
                   </div>
                 </div>
               </CardContent>
