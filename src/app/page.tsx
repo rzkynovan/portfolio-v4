@@ -1,5 +1,6 @@
 "use client";
 import HeaderComponent from "@/components/Header";
+import GitHubCalendar from "react-github-calendar";
 import Image from "next/image";
 import { FiGithub } from "react-icons/fi";
 import Link from "next/link";
@@ -22,10 +23,13 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { BiRightArrow } from "react-icons/bi";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useState } from "react";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function Home() {
   return (
-    <>
+    <main className="relative">
       <HeaderComponent />
       <section className=" max-w-7xl mx-auto mt-24 max-lg:mt-12 overflow-hidden">
         <div className="grid lg:grid-cols-2 items-center max-xl:px-4 max-lg:gap-y-8 ">
@@ -90,7 +94,8 @@ export default function Home() {
                 transition={{ duration: 0.3, ease: "easeIn", delay: 0.6 }}
               >
                 <Link
-                  href={"/"}
+                  href={"https://github.com/rzkynovan"}
+                  target="_blank"
                   className="text-3xl hover:text-blue-400 transition-colors"
                 >
                   <FiGithub />
@@ -102,7 +107,8 @@ export default function Home() {
                 transition={{ duration: 0.3, ease: "easeIn", delay: 0.4 }}
               >
                 <Link
-                  href={"/"}
+                  href={"https://instagram.com/rzkynovan"}
+                  target="_blank"
                   className="text-3xl hover:text-blue-400 transition-colors"
                 >
                   <FaInstagram />
@@ -114,7 +120,8 @@ export default function Home() {
                 transition={{ duration: 0.3, ease: "easeIn", delay: 0.2 }}
               >
                 <Link
-                  href={"/"}
+                  href={"https://www.linkedin.com/in/rzkynovan/"}
+                  target="_blank"
                   className="text-3xl hover:text-blue-400 transition-colors"
                 >
                   <FaLinkedin />
@@ -398,9 +405,89 @@ export default function Home() {
             </Card>
           </TabsContent>
         </Tabs>
+
+        <div className="flex max-lg:flex-col gap-4">
+          <div className="border rounded-xl p-3 flex flex-col gap-4 items-center">
+            <h5>I'm a code enthusiast</h5>
+            <Link
+              href={"https://github.com/rzkynovan"}
+              className="flex flex-col items-center gap-2"
+            >
+              <Avatar>
+                <AvatarImage src="https://github.com/rzkynovan.png" />
+                <AvatarFallback>RN</AvatarFallback>
+              </Avatar>
+              <p>rzkynovan</p>
+            </Link>
+            <div className="flex">
+              <p>80+ Repositories | 10+ Projects</p>
+            </div>
+          </div>
+          <div className="border rounded-xl p-3 max-w-sm md:max-w-md lg:max-w-lg xl:max-w-max">
+            <GitHubCalendar username="rzkynovan" />
+          </div>
+        </div>
       </section>
-      <section className=""></section>
-    </>
+      <section className="bg-white lg:shadow-[0_-12px_1000px_10px_rgba(0,0,0,0.2)] dark:lg:shadow-[0_-12px_1000px_10px_rgba(255,255,255,0.2)] dark:bg-[#030712] flex max-md:flex-col items-center mx-auto justify-center pt-[100px] pb-[200px] gap-12 lg:sticky top-0 max-xl:px-6  max-lg:border-y ">
+        <div className="flex flex-col max-w-xl">
+          <h1 className="text-5xl font-bold">Hit Me Up</h1>
+          <p>
+            Let me know if you have a brilliant idea and want to discuss a
+            collaboration!
+          </p>
+        </div>
+        <div className="w-full max-w-3xl">
+          <form
+            className="flex flex-col  gap-4"
+            action="mailto:rizkynovan21@gmail.com"
+            method="get"
+          >
+            <div className="flex flex-col gap-2">
+              <Label htmlFor="name">Name</Label>
+              <Input name="subject" id="name" />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <Label htmlFor="text">Message</Label>
+              <Textarea name="body" id="text" />
+            </div>
+            <Button>Send Message</Button>
+          </form>
+        </div>
+        <div className="flex absolute bottom-0 justify-between items-center w-full p-4">
+          <div className="flex flex-col gap-3">
+            <p className="text-xl">Github</p>
+            <Link
+              href={"https://github.com/rzkynovan"}
+              target="_blank"
+              className="text-3xl hover:text-blue-400 transition-colors"
+            >
+              <FiGithub />
+            </Link>
+          </div>
+          <p className=" max-md:hidden">rzkynovan - 2024</p>
+          <div className="flex flex-col gap-3">
+            <p className="text-xl">Social Media</p>
+            <div className="flex gap-3 justify-end">
+              <Link
+                href={"https://instagram.com/rzkynovan"}
+                target="_blank"
+                className="text-3xl hover:text-blue-400 transition-colors"
+              >
+                <FaInstagram />
+              </Link>
+              <Link
+                href={"https://www.linkedin.com/in/rzkynovan/"}
+                target="_blank"
+                className="text-3xl hover:text-blue-400 transition-colors"
+              >
+                <FaLinkedin />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
 function jQuery(window: Window & typeof globalThis) {
