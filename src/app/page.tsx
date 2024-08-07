@@ -408,7 +408,7 @@ export default function Home() {
 
         <div className="flex max-lg:flex-col gap-4">
           <div className="border rounded-xl p-3 flex flex-col gap-4 items-center">
-            <h5>I'm a code enthusiast</h5>
+            <h5>I{"'"}m a code enthusiast</h5>
             <Link
               href={"https://github.com/rzkynovan"}
               className="flex flex-col items-center gap-2"
